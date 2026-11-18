@@ -8,31 +8,37 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <div class="brand">◆ NC AWARDS</div>
+    <p>ГОЛОСОВАНИЕ</p>
+  </header>
 
-<div class="crystal-bg" aria-hidden="true">
-  <span class="bg-crystal c1"></span>
-  <span class="bg-crystal c2"></span>
-  <span class="bg-crystal c3"></span>
-  <span class="bg-crystal c4"></span>
-  <span class="bg-crystal c5"></span>
-  <span class="bg-crystal c6"></span>
-</div>
+  <main>
+    <section class="intro">
+      <h1>Выбирай лучших!</h1>
+      <p>Один голос в каждой номинации.</p>
+    </section>
 
-<header>
-  <div class="brand">◆ NC AWARDS</div>
-  <p>ГОЛОСОВАНИЕ</p>
-</header>
+    <section id="auth">
+      <h2>Вход в NC AWARDS</h2>
+      <p>Введи свою почту. Мы отправим тебе ссылку для входа.</p>
+      <div class="login">
+        <input id="email" type="email" placeholder="Твоя электронная почта">
+        <button id="loginBtn">Получить ссылку</button>
+      </div>
+      <p id="authStatus" class="status"></p>
+    </section>
 
-<main>
-  <section class="intro">
-    <h1>Выбирай лучших!</h1>
-    <p>Один голос в каждой номинации.</p>
-  </section>
+    <section id="voting" hidden>
+      <p id="userEmail" class="status"></p>
+      <button id="logoutBtn">Выйти</button>
+      <div id="categories" class="grid"></div>
+    </section>
 
-  <div id="categories" class="grid"></div>
-  <p id="status" class="status"></p>
-</main>
+    <p id="status" class="status"></p>
+  </main>
 
-<script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
 </body>
 </html>
