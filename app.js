@@ -40,6 +40,10 @@ document.getElementById("logoutBtn").onclick = async () => {
 };
 
 async function showVoting(user) {
+  if (window.votingLoaded) return;
+  window.votingLoaded = true;
+
+  authEl.hidden = true;
   authEl.hidden = true;
   votingEl.hidden = false;
   document.getElementById("userEmail").textContent =
